@@ -41,14 +41,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.18.0"
-  complycube:
-    dependency: "direct main"
-    description:
-      name: complycube
-      sha256: bcef8dfdd610a70e5b186adff69f9e49d0e950c4d40c1be1f179e3034125878f
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.0.1"
   fake_async:
     dependency: transitive
     description:
@@ -139,14 +131,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.9.0"
-  plugin_platform_interface:
-    dependency: transitive
-    description:
-      name: plugin_platform_interface
-      sha256: "4820fbfdb9478b1ebae27888254d445073732dae3d6ea81f0b7e06d5dedc3f02"
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.1.8"
   sky_engine:
     dependency: transitive
     description: flutter
