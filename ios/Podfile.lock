@@ -1,0 +1,63 @@
+PODS:
+  - Alamofire (5.6.1)
+  - Analytics (4.1.8)
+  - complycube (0.0.1):
+    - ComplyCubeMobileSDK (= 1.2.6)
+    - Flutter
+  - ComplyCubeMobileSDK (1.2.6):
+    - Alamofire (= 5.6.1)
+    - Analytics (~> 4.1)
+    - FingerprintPro (= 2.4.0)
+    - GooglePlaces (= 7.4.0)
+    - JWTDecode (~> 2.6.3)
+    - lottie-ios (= 4.4.1)
+    - Sentry (= 8.36.0)
+    - SwiftyJSON (= 5.0.1)
+  - FingerprintPro (2.4.0)
+  - Flutter (1.0.0)
+  - GooglePlaces (7.4.0)
+  - JWTDecode (2.6.3)
+  - lottie-ios (4.4.1)
+  - Sentry (8.36.0):
+    - Sentry/Core (= 8.36.0)
+  - Sentry/Core (8.36.0)
+  - SwiftyJSON (5.0.1)
+
+DEPENDENCIES:
+  - complycube (from `.symlinks/plugins/complycube/ios`)
+  - Flutter (from `Flutter`)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - Analytics
+    - ComplyCubeMobileSDK
+    - FingerprintPro
+    - GooglePlaces
+    - JWTDecode
+    - lottie-ios
+    - Sentry
+    - SwiftyJSON
+
+EXTERNAL SOURCES:
+  complycube:
+    :path: ".symlinks/plugins/complycube/ios"
+  Flutter:
+    :path: Flutter
+
+SPEC CHECKSUMS:
+  Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
+  Analytics: 9655e0e1c71ea98107cfcb2b14891168acc6c6c9
+  complycube: aecea8b78a236dc42dc8e713402ee8781b1b9ebd
+  ComplyCubeMobileSDK: 7fb856801d5b97fde32d82aa7e374ec6c467e695
+  FingerprintPro: 550396e390f81754a6ca13991131ea28952c4e48
+  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  GooglePlaces: 544e908d94860bf6f8fc1865b80d2c7eb6b5f937
+  JWTDecode: 33e5e26e5ddbd21b2065820894c08fef0cad9509
+  lottie-ios: e047b1d2e6239b787cc5e9755b988869cf190494
+  Sentry: f8374b5415bc38dfb5645941b3ae31230fbeae57
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
+
+PODFILE CHECKSUM: 26b735b4d130e5263f8367c3a071969294e1d805
+
+COCOAPODS: 1.16.2
