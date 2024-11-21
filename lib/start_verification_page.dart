@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_sdk_test_app/cc_page.dart';
+import 'package:flutter_sdk_test_app/new_cc_page.dart';
+
+import 'settings_page.dart';
 
 class StartVerificationPage extends StatefulWidget {
   const StartVerificationPage({super.key});
@@ -23,12 +26,29 @@ class _StartVerificationPageState extends State<StartVerificationPage> {
 
   void _submitForm() {
     if (_formKey.currentState!.validate()) {
+      print('Client ID: ${_clientIdController.text}');
+      print('Client Token: ${_clientTokenController.text}');
+      if (_clientIdController.text != '' && _clientTokenController.text != '') {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => CCPage(
+                    clientId: _clientIdController.text,
+                    token: _clientTokenController.text,
+                  )),
+        );
+      }
+    }
+  }
+
+  void _submitFormNewStyle() {
+    if (_formKey.currentState!.validate()) {
       // TODO: Handle the submission
       print('Client ID: ${_clientIdController.text}');
       print('Client Token: ${_clientTokenController.text}');
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => const CCPage()),
+        MaterialPageRoute(builder: (context) => const NewCCPage()),
       );
     }
   }
@@ -36,6 +56,7 @@ class _StartVerificationPageState extends State<StartVerificationPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         title: const Text('Client Credentials'),
         elevation: 2,
@@ -100,7 +121,34 @@ class _StartVerificationPageState extends State<StartVerificationPage> {
                     padding: const EdgeInsets.symmetric(vertical: 16),
                   ),
                   child: const Text(
-                    'Submit',
+                    'Submit as per docs',
+                    style: TextStyle(fontSize: 16),
+                  ),
+                ),
+                const SizedBox(height: 24),
+                ElevatedButton(
+                  onPressed: _submitFormNewStyle,
+                  style: ElevatedButton.styleFrom(
+                    padding: const EdgeInsets.symmetric(vertical: 16),
+                  ),
+                  child: const Text(
+                    'Submit with new method',
+                    style: TextStyle(fontSize: 16),
+                  ),
+                ),
+                const Spacer(),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const SettingsPage()),
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(
+                    padding: const EdgeInsets.symmetric(vertical: 16),
+                  ),
+                  child: const Text(
+                    'Change config settings',
                     style: TextStyle(fontSize: 16),
                   ),
                 ),
